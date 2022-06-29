@@ -33,7 +33,7 @@ const AddItem = () => {
                 <input className='me-4' type="text" name='title' placeholder='Title' required />
                 <input className='me-4' type="text" name='original_language' placeholder='Original_language' required />
                 <input className='me-4' type="text" name='publish_date' placeholder='Publish_date' required />
-                <input className='me-4' type="text" name='genres' placeholder='Genres' required />
+                <input className='me-4' type="text" name='genres' placeholder='Genres' />
                 <br /> <br />
                 <input type="submit" value='Add Details' />
             </form>

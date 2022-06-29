@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AddItem from '../AddItem';
+import { CSVLink } from 'react-csv';
 import './Table.css';
 
 const Table = () => {
@@ -10,6 +11,19 @@ const Table = () => {
             .then(res => res.json())
             .then(data => setData(data));
     }, [])
+
+    const headers = [
+        { label: 'Author', key: 'author' },
+        { label: 'Title', key: 'title' },
+        { label: 'Original_language', key: 'original_language' },
+        { label: 'Publish_date', key: 'publish_date' },
+        { label: 'Genres', key: 'genres' }
+    ]
+    const csvReport = {
+        filename: 'Report.csv',
+        headers: headers,
+        data: data
+    };
     return (
         <div className='container'>
             <h2 className='mt-5 text-center'>Books store</h2>
@@ -42,6 +56,7 @@ const Table = () => {
             </div>
 
             <AddItem></AddItem>
+            <button className='btn btn-light mt-4'><CSVLink {...csvReport} className='text-decoration-none text-dark fw-bold'>Generate</CSVLink></button>
         </div>
     );
 };
