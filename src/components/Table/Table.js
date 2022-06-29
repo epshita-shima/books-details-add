@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AddItem from '../AddItem';
 import './Table.css';
 
 const Table = () => {
@@ -39,6 +40,8 @@ const Table = () => {
                     </tbody>
                 </table>
             </div>
+
+            <AddItem></AddItem>
         </div>
     );
 };
