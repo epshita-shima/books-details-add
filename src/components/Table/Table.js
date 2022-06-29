@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGear } from '@fortawesome/free-solid-svg-icons';
 import AddItem from '../AddItem';
 import { CSVLink } from 'react-csv';
 import './Table.css';
@@ -29,7 +31,7 @@ const Table = () => {
             <h2 className='mt-5 text-center'>Books store</h2>
 
             <div className='table-fixed'>
-                <table class="table table-bordered mt-4">
+                <table class="table table-bordered mt-5">
                     <thead>
                         <tr>
                             <th scope="col">Sl.</th>
@@ -56,7 +58,7 @@ const Table = () => {
             </div>
 
             <AddItem></AddItem>
-            <button className='btn btn-light mt-4'><CSVLink {...csvReport} className='text-decoration-none text-dark fw-bold'>Generate</CSVLink></button>
+            <button className='btn btn-gray mt-4'><CSVLink {...csvReport} className='text-decoration-none text-dark fw-bold'><FontAwesomeIcon icon={faGear} className='me-2' />Generate</CSVLink></button>
         </div>
     );
 };

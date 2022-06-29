@@ -3,3 +3,8 @@
     overflow-y: scroll;
     height: 200px;
 }
+
+.btn-gray {
+    background: rgb(222, 216, 216);
+
+}
