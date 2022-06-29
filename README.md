@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Books Details Added Form
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Using Technology
+* Bootstrap
+* React.js
+* Express.js
+* Mongodb
 
 ## Available Scripts
 
